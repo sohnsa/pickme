@@ -1,0 +1,166 @@
+
+/* Custom Bootstrap Variables Override */
+:root {
+  --bs-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bs-gradient-danger: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  --bs-gradient-success: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+/* Background Gradient */
+body {
+  background: var(--bs-gradient-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom Card Styles */
+.card {
+  border-radius: 20px !important;
+  backdrop-filter: blur(10px);
+}
+
+.card-header {
+  background: var(--bs-gradient-primary) !important;
+  border-radius: 20px 20px 0 0 !important;
+  border: none !important;
+}
+
+/* Custom Button Styles */
+.btn-gradient-danger {
+  background: var(--bs-gradient-danger);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.btn-gradient-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+  color: white;
+}
+
+.btn-gradient-danger:active {
+  transform: translateY(0);
+}
+
+/* Number Cards */
+.number-card {
+  background: var(--bs-gradient-success);
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+  transition: all 0.3s ease;
+  animation: bounceIn 0.6s ease;
+}
+
+.number-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+}
+
+/* Custom Alert Styles */
+.alert-success {
+  background: linear-gradient(135deg, rgba(212, 237, 218, 0.8), rgba(144, 238, 144, 0.2));
+  border: 2px solid #4ecdc4;
+  border-radius: 15px;
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom SweetAlert2 Styles */
+.swal2-popup {
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.swal2-title {
+  color: #333;
+  font-weight: 600;
+}
+
+.swal2-confirm {
+  background: var(--bs-gradient-danger) !important;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: 600;
+}
+
+.swal2-confirm:hover {
+  background: var(--bs-gradient-danger) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 2rem !important;
+  }
+  
+  .display-6 {
+    font-size: 1.75rem;
+  }
+  
+  .number-card {
+    font-size: 1.25rem;
+    padding: 15px;
+  }
+}
+
+/* Loading Animation */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Icon Animations */
+.bi {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .bi {
+  transform: scale(1.1);
+}
